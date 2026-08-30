@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f9f2;
+  --panel: #ffffff;
+  --soft: #f3f8f1;
+  --primary: #1e7f45;
+  --primary-deep: #135b31;
+  --primary-soft: #e7f6eb;
+  --secondary: #f6c76b;
+  --text: #172f24;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --danger: #d95a48;
+  --success: #1f8d5a;
+  --shadow: 0 12px 32px rgba(18, 91, 49, 0.12);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #f9fbf6 0%, #eef7ee 100%);
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+/* Card classes WITHOUT forced background override */
+.sih-card {
+  border-radius: 28px;
+  box-shadow: 0 12px 32px rgba(18, 91, 49, 0.12);
+}
+
+.sih-card-white {
+  background-color: #ffffff !important;
+  border: 2px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  border-radius: 28px;
+  box-shadow: 0 12px 32px rgba(18, 91, 49, 0.12);
+}
+
+.sih-card-dark {
+  background-color: #022c22 !important; /* Deep Emerald 950 */
+  border: 3px solid #047857 !important; /* Emerald 700 */
+  color: #ffffff !important;
+  border-radius: 28px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.sih-hero-panel {
+  background: linear-gradient(135deg, #eefaf0 0%, #dff3e5 100%);
+  border: 2px solid #a7f3d0;
+  border-radius: 28px;
+  box-shadow: 0 12px 32px rgba(18, 91, 49, 0.1);
+}
+
+.sih-btn-primary {
+  background: linear-gradient(135deg, #047857, #064e3b) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 20px rgba(4, 120, 87, 0.25);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sih-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(4, 120, 87, 0.35);
+}
+
+.sih-btn-secondary {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+}
+
+.sih-btn-secondary:hover {
+  transform: translateY(-1px);
+  background-color: #f8fafc !important;
+}
+
+.sih-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #d1fae5;
+  color: #064e3b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Marquee News Ticker */
+.marquee-wrap {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 36px;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
